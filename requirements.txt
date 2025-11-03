@@ -1,0 +1,7 @@
+pyreadr
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn==1.7.0
+xgboost==3.1.1
