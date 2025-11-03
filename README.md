@@ -1,19 +1,17 @@
-<img src="images/lablife.png" width="200">
-
 # LabLife - Biological Age Predictor
+<img src="images/lablife.png" width="200"><br>
 Predict your biological age from 29 standard laboratory values using modern machine learning techniques.<br>
 _ML Zoomcamp 2025_
 
 ## Problem description
-How to assess the age of your patient? Asking is far too easy, right? Don´t look further, you have found the perfect solution. **LabLife** predicts the biological age from 29 common laboratory results. If your predicted age is lower than your chronological one — congratulations, your body might be in excellent shape (according to the all-knowing lab).
-Does it make sense? Try it and find out!
+How to assess the age of your patient? Asking is far too easy, right? Don´t look further, you have found the perfect solution. **LabLife** predicts the biological age from 29 common laboratory results. If your predicted age is lower than your chronological one — congratulations, your body might be in excellent shape (according to the all-knowing lab). Does it make sense? Try it and find out!
 
 ### Dataset description
 The data can be downloaded from [higgi13425](https://github.com/higgi13425/medicaldata/raw/refs/heads/master/data/thiomon.rda).<br>
-It is provided on the GitHub page for educational purposes.
-
+It is provided on the GitHub page for educational purposes.<br>
+Description of the analytes:
 |Abbreviation|Analyte|Unit|
-|------------|-------|----|
+|:-----------|:------|:---|
 |wbc|White Blood Cells|10^9/L|
 |hgb|Hemoglobin|g/dL|
 |hct|Hematocrit|%|
@@ -59,18 +57,6 @@ cd lablife
 pip install -r requirements.txt
 ```
 
-## How to use?
-Start the webservice:
-```
-python predict.py
-```
-Then open your browser and go to [http://localhost](http://localhost)
-
-Enter your results and click on **predict**!
-
-<img src="images/predict.png" width="400">
-
-
 ## Docker container
 Build and run the prediction API in a container:
 ```
@@ -86,6 +72,14 @@ curl -X POST http://localhost/predict -H "Content-Type: application/json" -d "{\
 Response example:
 `{"prediction": 42.7}`
 
+## How to use the tool?
+Start the webservice:
+```
+python predict.py
+```
+Then open your browser and go to [http://localhost](http://localhost)
+Enter your results and click on **Predict**!
+<img src="images/predict.png" width="500">
 
 ## Cloud Deployment
 You can deploy `serve.py` as a microservice to:
@@ -101,3 +95,4 @@ Make sure to:
 ## Acknowledgments
 Dataset provided by [medicaldata package from higgi13425](https://github.com/higgi13425/medicaldata).<br>
 This page was built for educational purposes in the ML Zoomcamp course 2025.
+
